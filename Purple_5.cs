@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab_6
 {
-    internal class Purple_5
+    public class Purple_5
     {
         public struct Response
         {
