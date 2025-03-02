@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab_6
 {
-    internal class Purple_3
+    public class Purple_3
     {
         public struct Participant
         {
@@ -39,7 +39,7 @@ namespace Lab_6
                     return copy;
                 }
             }
-            // доделать позже
+            
             public int Score
             {
                 get
@@ -57,9 +57,8 @@ namespace Lab_6
                 _name = name;
                 _surname = surname;
                 _marks = new double[7]; 
-                _position = new int[7]; // ?
+                _position = new int[7]; 
                 _judge = 0;
-                // разъмеры
                 for (int i = 0; i < _marks.Length; i++)
                     _marks[i] = 0;
                 for (int i = 0; i < _position.Length; i++)
@@ -101,7 +100,6 @@ namespace Lab_6
             {
                 if (array == null) return;
 
-                //узнать что такое эта сортировка
 
                 Array.Sort(array, (a, b) => {
                     if(a.Score == b.Score)
