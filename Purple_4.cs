@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_6
 {
-    internal class Purple_4
+    public class Purple_4
     {
         public struct Sportsman
         {
@@ -26,7 +26,7 @@ namespace Lab_6
                 _timeRun = 0;
                 _flag = 0;
             }
-            // доделать
+            
             public void Run(double time)
             {
                 if (_flag == 1) return;
