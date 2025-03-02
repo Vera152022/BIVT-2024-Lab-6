@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_6
 {
-    internal class Purple_2
+    public class Purple_2
     {
         public struct Participant
         {
@@ -18,7 +18,7 @@ namespace Lab_6
             public string Name => _name;
             public string Surname => _surname;
             public double Distance => _jump;
-            public int[] Markers
+            public int[] Marks
             {
                 get
                 {
@@ -73,10 +73,9 @@ namespace Lab_6
             public Participant(string name, string surname)
             {
                 _name = name;
-                //int i = _name.Length;
                 _surname = surname;
                 _marks = new int[5];
-                _jump = 0; // не сказано про это
+                _jump = 0; 
                 for (int i = 0; i < _marks.Length; i++)
                     _marks[i] = 0;
             }
