@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using System.Windows.Markup;
 
 namespace Lab_6
 {
-    internal class Purple_1
+    public class Purple_1
     {
         public struct Participant
         {
@@ -113,7 +113,6 @@ namespace Lab_6
             {
                 if(array == null) return;
 
-                //узнать что такое эта сортировка
 
                 Array.Sort(array, (a, b) => {
                     double x = b.TotalScore - a.TotalScore;
