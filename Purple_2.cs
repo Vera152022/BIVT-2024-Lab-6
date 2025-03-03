@@ -17,7 +17,7 @@ namespace Lab_6
 
             public string Name => _name;
             public string Surname => _surname;
-            public double Distance => _jump;
+            public int Distance => _jump;
             public int[] Marks
             {
                 get
