@@ -34,12 +34,10 @@ namespace Lab_6
                 _flag = 1;
             }
 
-            public static void Print(Sportsman[] array)
+            public void Print()
             {
-                foreach(var p1 in array) 
-                {
-                    Console.Write(p1.Name + " " + p1.Surname + " " + p1.Time);
-                }
+                Console.Write(Name + " " + Surname + " " + Time);
+                
             }
         }
         public struct Group
@@ -81,6 +79,7 @@ namespace Lab_6
                 if (_sportsmen == null) return;
                 Sportsman[] new_sport = new Sportsman[_sportsmen.Length + 1];
                 Array.Copy(_sportsmen, new_sport, _sportsmen.Length);
+                new_sport[new_sport.Length - 1] = s;
                 _sportsmen = new_sport;
             }
 
@@ -116,10 +115,10 @@ namespace Lab_6
             public static Group Merge(Group group1, Group group2)
             {
                 Group g = new Group("Финалисты");
-                var first = group1._sportsmen;
-                var second = group2._sportsmen;
-                if(first == null) first = new Sportsman[0];
-                if(second == null) second = new Sportsman[0];
+                var first = group1.Sportsmen;
+                var second = group2.Sportsmen;
+                if(group1.Sportsmen == null) first = new Sportsman[0];
+                if(group2.Sportsmen == null) second = new Sportsman[0];
                 g._sportsmen = new Sportsman[first.Length + second.Length];
                 for(int i = 0, j = 0; i < first.Length || j < second.Length;)
                 {
@@ -149,12 +148,8 @@ namespace Lab_6
                 return g;
             }
 
-            public static void Print(Sportsman[] array)
+            public void Print()
             {
-                foreach(var p1 in array) 
-                {
-                    Console.Write(p1.Name + " " + p1.Surname + " " + p1.Time);
-                }
             }
 
         }
