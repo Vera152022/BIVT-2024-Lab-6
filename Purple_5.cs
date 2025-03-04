@@ -25,7 +25,7 @@ namespace Lab_6
                 _animal = animal;
                 _characterTrait = characterTrait;
                 _oobject = oobject;
-                _answer = new string[] {animal, characterTrait, oobject};
+                _answer = new string[] {_animal, _characterTrait, _oobject};
                 
             }
 
@@ -35,20 +35,16 @@ namespace Lab_6
                 int total = 0;
                 foreach(var i in responses)
                 {
-                    if (i._answer == null) continue;
-                    var r = i._answer;
-                    if (r.Length >= questionNumber && r[questionNumber - 1] != null)
+                    if (i._answer[questionNumber] != "")
                         total++;
                 }
                 return total;
             }
 
-            public static void Print(Response[] array)
+            public void Print()
             {
-                foreach (var p1 in array)
-                {
-                    Console.Write(p1.Animal + " " + p1.CharacterTrait + " " + p1.Concept);
-                }
+                Console.Write(Animal + " " + CharacterTrait + " " + Concept);
+                
             }
         }
         public struct Research
@@ -133,12 +129,8 @@ namespace Lab_6
                 return total_answer;
             }
 
-        public static void Print(Response[] array)
+        public void Print()
         {
-            foreach (var p1 in array)
-            {
-                Console.Write(p1.Animal + " " + p1.CharacterTrait + " " + p1.Concept);
-            }
         }
         }
 
