@@ -104,14 +104,11 @@ namespace Lab_6
 
             }
 
-            public static void Print(Participant[] array)
+            public void Print()
             {
-                foreach (var p1 in array)
-                {
-                    {
-                        Console.WriteLine(p1.Name + " " + p1.Surname + " " + p1.Result);
-                    }
-                }
+                
+                Console.WriteLine(Name + " " + Surname + " " + Result);
+                
 
             }
         }
