@@ -119,7 +119,7 @@ namespace Lab_6
                     return a.Score - b.Score;
                 });
             }
-            public double Summm
+            private double Summm
             {
                 get
                 {
@@ -132,7 +132,7 @@ namespace Lab_6
                     return sum;
                 }
             }
-            public int Winner
+            private int Winner
             {
                 get
                 {
@@ -149,12 +149,11 @@ namespace Lab_6
                 }
                 
             }
-            public static void Print(Participant[] array)
+            public void Print()
             {
-                foreach (var p1 in array)
-                {
-                    Console.WriteLine(p1.Name + " " + p1.Surname + " " + p1.Score + " " + p1.Winner + " " + p1.Summm);
-                }
+                
+                Console.WriteLine(Name + " " + Surname + " " + Score + " " + Winner + " " + Summm);
+                
             }
         }
     }
