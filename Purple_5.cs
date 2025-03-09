@@ -79,7 +79,7 @@ namespace Lab_6
             public string[] GetTopResponses(int question)
             {
                 if (_responses == null || question < 1 || question > 3) return null;
-                
+                //question--;
                 int total = 0;
                 int n = _responses.Length;
                 string[] answer = new string[n];
