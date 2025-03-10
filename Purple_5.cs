@@ -19,6 +19,7 @@ namespace Lab_6
             public string Animal => _animal;
             public string CharacterTrait => _characterTrait;
             public string Concept => _oobject;
+            private string[] Ans => _answer;
 
             public Response(string animal, string characterTrait, string oobject)
             {
@@ -32,11 +33,12 @@ namespace Lab_6
             public int CountVotes(Response[] responses, int questionNumber)
             {
                 if (responses == null || questionNumber < 1 || questionNumber > 3) return 0;
-                questionNumber--;
+                
+                int copi_questionNumber = questionNumber - 1;
                 int total = 0;
                 foreach (var i in responses)
                 {
-                    if (i._answer[questionNumber] != "")
+                    if (i.Ans[copi_questionNumber] == Ans[copi_questionNumber] && i.Ans[copi_questionNumber] != "")
                         total++;
                 }
                 return total;
