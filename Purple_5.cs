@@ -38,7 +38,7 @@ namespace Lab_6
                 int total = 0;
                 foreach (var i in responses)
                 {
-                    if (i.Ans[copi_questionNumber] == Ans[copi_questionNumber] && i.Ans[copi_questionNumber] != "")
+                    if (i.Ans[copi_questionNumber] == Ans[copi_questionNumber] && i.Ans[copi_questionNumber] != null)
                         total++;
                 }
                 return total;
